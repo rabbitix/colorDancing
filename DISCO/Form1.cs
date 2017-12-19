@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace DISCO
 {
     public partial class Form1 : Form
     {
         colors colorpick = new colors();
+    
 
         public Form1()
         {
             InitializeComponent();
         }
+       
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.CheckState == CheckState.Checked)
+            if (checkBox1.Checked)
             {
                 ThreadStart ts = new ThreadStart(colorpick.regular);
                 Thread TRD = new Thread(ts);
@@ -60,7 +63,7 @@ namespace DISCO
 
         private void button1_Click(object sender, EventArgs e)
         {
-           colorpick.Run = false;
+           colorpick.Run = false;            
            System.Environment.Exit(0);
         }
     }

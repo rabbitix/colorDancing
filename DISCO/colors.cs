@@ -15,6 +15,23 @@ namespace DISCO
             set { run = value; }
             get { return run; }
         }
+
+        public void regular()
+        {
+            do
+            {
+                Form1.ActiveForm.BackColor = Color.Red;
+                Thread.Sleep(600);
+                Form1.ActiveForm.BackColor = Color.Yellow;
+                Thread.Sleep(600);
+                Form1.ActiveForm.BackColor = Color.Blue;
+                Thread.Sleep(600);
+                Form1.ActiveForm.BackColor = Color.Green;
+                Thread.Sleep(600);
+                Form1.ActiveForm.BackColor = Color.Purple;
+                Thread.Sleep(600);
+            } while (Run);
+        }
         public void allcolors()
         {
             do
@@ -306,21 +323,6 @@ namespace DISCO
             } while (Run);
         }
 
-        public void regular()
-        {
-            do
-            {
-                Form1.ActiveForm.BackColor = Color.Red;
-                Thread.Sleep(600);
-                Form1.ActiveForm.BackColor = Color.Yellow;
-                Thread.Sleep(600);
-                Form1.ActiveForm.BackColor = Color.Blue;
-                Thread.Sleep(600);
-                Form1.ActiveForm.BackColor = Color.Green;
-                Thread.Sleep(600);
-                Form1.ActiveForm.BackColor = Color.Purple;
-                Thread.Sleep(600);
-            } while (Run);
-        }
+       
     }
 }
